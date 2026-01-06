@@ -3,7 +3,7 @@
 /* making use of :where to allow for low specificity making it easy to override */
 
 
-/* 1. border-box for sizing model */
+/* 1. border-box for box model */
 *,
 *::before,
 *::after {
@@ -32,11 +32,12 @@ padding is optional but i do this because of lists*/
     -webkit-font-smoothing: antialiased;
 }
 
+/* 5. ensure full viewport height */
 :where(html, body) {
     min-block-size: 100%;
 }
 
-/* improve line wrapping */
+/* 6. improve line wrapping */
 :where(h1, h2, h3,
     h4, h5, h6) {
     text-wrap: balance;
@@ -46,16 +47,18 @@ padding is optional but i do this because of lists*/
     text-wrap: pretty;
 }
 
+:where(figure)>:where(figcaption) {
+    text-wrap: balance;
+}
+
 :where(p, h1, h2, h3,
     h4, h5, h6) {
     overflow-wrap: break-word;
 }
 
-:where(figure)>:where(figcaption) {
-    text-wrap: balance;
-}
 
-/* making media elements block-level */
+
+/* 7. making media elements block-level */
 :where(img,
     svg,
     video,
@@ -73,7 +76,7 @@ padding is optional but i do this because of lists*/
     max-inline-size: 100%
 }
 
-/* inherit font and letter spacing for form controls */
+/* 8. inherit font and letter spacing for form controls */
 :where(input,
     button,
     textarea,
@@ -83,12 +86,13 @@ padding is optional but i do this because of lists*/
     letter-spacing: inherit
 }
 
-/* textarea can only resized vertically and will grow to adjust its content */
+/* 9. textarea can only resized vertically and will grow to adjust its content */
 :where(textarea) {
     resize: vertical;
    field-sizing: content;
 }
 
+/* 10. table */
 :where(table) {
     width: fit-content;
     border-collapse: collapse;
@@ -101,7 +105,6 @@ padding is optional but i do this because of lists*/
     white-space: pre;
     writing-mode: lr
 }
-
 
 :where(a[href],
     area,
