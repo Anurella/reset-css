@@ -1,11 +1,30 @@
-# Custom css reset
+# Custom CSS reset
 
-Historically, browsers have their own presentation default styling which start to seem like inconsistency when building for various browsers. Something like line height being different has a more profound effect on height and alignment, hence the reasoning behind the reset.
+Browsers ship with default styles. Those defaults can create or seem like inconsistencies when building across different browsers—for example, differences in line-height can affect spacing, height, and alignment.
 
-More recently there is a growing synergy with browsers so a reduction in inconsistencies. one of the very first reset css was by [Eric Meyer in 2011](https://meyerweb.com/eric/tools/css/reset/). Eric recommended that the setup be finetuned to suit use. It has been 10 years and so much has changed hence the need for an up to date stylesheet.
+While browser standards have improved over time and inconsistencies have reduced, defaults still vary enough that a reset stylesheet remains a useful starting point.
 
-I put together a modified reset stylesheet, it is a collection from work done and from inspecting beautiful sites on the web. it is generic which means it can be altered and changed to suit your needs.
+One of the earliest widely used reset stylesheets was [Eric Meyer's](https://meyerweb.com/eric/tools/css/reset/) (2011). Eric recommended tailoring resets to suit your needs. A lot has changed since then, so this project provides an updated, generic reset you can adapt.
 
-> Note
->
-> CSS reset style is best applied as the starting base. Also avoid adding to an existing codebase.
+This reset stylesheet is a collection based on real usage from work done and inspection of modern, well-built sites. It’s intended to be a strong baseline that you can modify to suit your needs.
+
+---
+
+## Getting Started
+
+1. Copy the reset.css file into your project
+2. Import it at the top of your main stylesheet so it loads before your app styles.
+
+```css
+ @import "./reset.css";
+```
+
+---
+
+### Note
+
+* Apply the reset as the starting base of a project - best applied that way.
+* Avoid introducing it into an existing codebase unless you are prepared to address layout/style changes.
+
+---
+
