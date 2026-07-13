@@ -11,8 +11,8 @@ This reset stylesheet is a collection based on real usage from work done and ins
 ---
 
 ## Getting Started
-
-1. Copy the reset.css file into your project
+You could introuduce this into your project by either;
+1. Copy the reset.css file into your project or 
 2. Import it at the top of your main stylesheet so it loads before your app styles.
 
 ```css
