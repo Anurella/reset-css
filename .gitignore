@@ -1,0 +1,7 @@
+/node_modules
+/build
+.env
+_githistory.json
+.DS_Store
+.idea
+*.log
